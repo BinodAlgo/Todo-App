@@ -53,7 +53,7 @@ const TodoList = () => {
 
   const filteredSearchTodos =
     todos && todos.length
-      ? todos.filter((todo) => todo.text.includes(searchParam))
+      ? todos.filter((todo) => todo.text.toLowerCase().includes(searchParam))
       : [];
   return (
     <div className="todo-list">
